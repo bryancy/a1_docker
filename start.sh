@@ -12,7 +12,7 @@ cd /home/a1/app/redis-cluster; sh start_cluster.sh
 mongod --dbpath=/home/a1/app/data/mongodb &
 
 
-cd $PROJECT_DIR/server &&  source $PROJECT_DIR/.ypwenv/bin/activate
+cd $PROJECT_DIR/yo_play &&  source $PROJECT_DIR/.ypwenv/bin/activate
 
 # start celery
 celery worker -A app.async_task.celery -I app.admin --loglevel=debug --logfile=logs/api_celery.log --concurrency=1 -Q api &
